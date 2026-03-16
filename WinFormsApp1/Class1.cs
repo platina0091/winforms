@@ -13,10 +13,10 @@ namespace WinFormsApp1
         protected int x, y, ox, oy;
         protected static int R;
         protected bool IsMoving;
-
+        protected bool fig;
         public Shape(int xx, int yy)
         {
-            x = xx; y = yy; IsMoving = false;
+            x = xx; y = yy; IsMoving = false; this.fig = true;
         }
         public bool isMoving
         {
@@ -42,6 +42,25 @@ namespace WinFormsApp1
         {
             get { return oy; }
             set { oy = value; }
+        }
+        public bool Fig
+        {
+            get { return fig; }
+            set { fig = value; }
+        }
+        public static double angle(Shape A, Shape B, Shape C)
+        {
+            if (A == B || B == C || C == A)
+            {
+                return 3.0;
+            }
+            int BAx = A.X - B.X;
+            int BAy = A.Y - B.Y;
+            int BCx = C.X - B.X;
+            int BCy = C.Y - B.Y;
+            double BA = Math.Sqrt(BAx * BAx + BAy * BAy);
+            double BC = Math.Sqrt(BCx * BCx + BCy * BCy);
+            return (BAx * BCx + BAy * BCy) / BA / BC;
         }
         static Shape()
         {

@@ -33,13 +33,16 @@
             circleToolStripMenuItem = new ToolStripMenuItem();
             triangleToolStripMenuItem = new ToolStripMenuItem();
             squareToolStripMenuItem = new ToolStripMenuItem();
+            wayToolStripMenuItem = new ToolStripMenuItem();
+            jarvisToolStripMenuItem = new ToolStripMenuItem();
+            byDefinitionToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { shapeToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { shapeToolStripMenuItem, wayToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -57,23 +60,44 @@
             // circleToolStripMenuItem
             // 
             circleToolStripMenuItem.Name = "circleToolStripMenuItem";
-            circleToolStripMenuItem.Size = new Size(180, 22);
+            circleToolStripMenuItem.Size = new Size(116, 22);
             circleToolStripMenuItem.Text = "Circle";
             circleToolStripMenuItem.Click += circleToolStripMenuItem_Click_1;
             // 
             // triangleToolStripMenuItem
             // 
             triangleToolStripMenuItem.Name = "triangleToolStripMenuItem";
-            triangleToolStripMenuItem.Size = new Size(180, 22);
+            triangleToolStripMenuItem.Size = new Size(116, 22);
             triangleToolStripMenuItem.Text = "Triangle";
             triangleToolStripMenuItem.Click += triangleToolStripMenuItem_Click;
             // 
             // squareToolStripMenuItem
             // 
             squareToolStripMenuItem.Name = "squareToolStripMenuItem";
-            squareToolStripMenuItem.Size = new Size(180, 22);
+            squareToolStripMenuItem.Size = new Size(116, 22);
             squareToolStripMenuItem.Text = "Square";
             squareToolStripMenuItem.Click += squareToolStripMenuItem_Click_1;
+            // 
+            // wayToolStripMenuItem
+            // 
+            wayToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { jarvisToolStripMenuItem, byDefinitionToolStripMenuItem });
+            wayToolStripMenuItem.Name = "wayToolStripMenuItem";
+            wayToolStripMenuItem.Size = new Size(42, 20);
+            wayToolStripMenuItem.Text = "Way";
+            // 
+            // jarvisToolStripMenuItem
+            // 
+            jarvisToolStripMenuItem.Name = "jarvisToolStripMenuItem";
+            jarvisToolStripMenuItem.Size = new Size(180, 22);
+            jarvisToolStripMenuItem.Text = "Jarvis";
+            jarvisToolStripMenuItem.Click += jarvisToolStripMenuItem_Click;
+            // 
+            // byDefinitionToolStripMenuItem
+            // 
+            byDefinitionToolStripMenuItem.Name = "byDefinitionToolStripMenuItem";
+            byDefinitionToolStripMenuItem.Size = new Size(180, 22);
+            byDefinitionToolStripMenuItem.Text = "By definition";
+            byDefinitionToolStripMenuItem.Click += byDefinitionToolStripMenuItem_Click;
             // 
             // label1
             // 
@@ -114,5 +138,8 @@
         private ToolStripMenuItem triangleToolStripMenuItem;
         private ToolStripMenuItem squareToolStripMenuItem;
         private Label label1;
+        private ToolStripMenuItem wayToolStripMenuItem;
+        private ToolStripMenuItem jarvisToolStripMenuItem;
+        private ToolStripMenuItem byDefinitionToolStripMenuItem;
     }
 }
